@@ -231,6 +231,32 @@
 .nav-actions .booklet-btn {
   background: #0069d9;
 }
+.menu-toggle div {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.open div:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.menu-toggle.open div:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.sidebar {
+  width: 0;
+  transition: width 0.3s ease;
+}
+.sidebar.open {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .sidebar.open {
+    width: 300px;
+  }
+}
 
 /* Responsive */
 @media (max-width: 768px) {
