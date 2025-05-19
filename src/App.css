@@ -11,27 +11,6 @@ body {
   padding: 2rem 1rem;
 }
 
-/* Sponsors styles */
-.sponsors-section h3 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-.sponsor-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-.sponsor-logos img {
-  max-height: 80px;
-}
-
-/* Footer styles */
-.footer {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
 /* Responsive typography */
 @media (max-width: 768px) {
   .hero-content h1 {
