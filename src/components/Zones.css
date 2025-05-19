@@ -112,3 +112,6 @@
   border-radius: 9999px;
   z-index: 1;
 }
+.zone-link[data-new="true"] {
+  border: 2px solid #10b981;
+}
