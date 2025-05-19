@@ -1,22 +1,34 @@
-/* Navbar wrapper */
-.header {
+.nav-header {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1000;
   background: rgba(0, 0, 0, 0.7);
-}
-
-/* Layout grid: toggle / logo / actions */
-.navbar-container {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 0.5rem 1rem;
+  z-index: 1000;
 }
 
+/* Toggle */
+/* .menu-toggle {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.menu-toggle div {
+  width: 24px;
+  height: 2px;
+  background: #fff;
+} */
+
 /* Sidebar */
-.sidebar {
+/* .sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -29,55 +41,21 @@
 }
 .sidebar.open {
   width: 300px;
-}
+} */
 
-/* Sidebar menu list */
-.sidebar-menu {
+/* Menu list */
+.nav-list {
   list-style: none;
-  margin: 0;
   padding: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.sidebar-menu .view-booklet {
+.view-booklet {
   margin-bottom: 1rem;
 }
-.sidebar-menu .separator-line {
-  border: none;
-  height: 1px;
-  background: #444;
-  margin: 1rem 0;
-}
-
-/* Zone icons grid */
-.icon-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-.icon-cell {
-  flex: 0 0 30%;
-  text-align: center;
-}
-.icon-cell .icon-img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Social icons row */
-.social-grid {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-}
-.social-cell {
-  flex: 0 0 30%;
-  text-align: center;
-}
-
-/* “View Booklet” button */
 .booklet-btn {
-  display: block;
   width: 100%;
   padding: 0.75rem;
   background: #3578e5;
@@ -88,35 +66,32 @@
   border-radius: 4px;
 }
 
-/* Toggle (burger) button */
-.menu-toggle {
-  background: none;
-  border: none;
-  padding: 0.5rem;
+/* Icons */
+.icon-grid,
+.social-grid {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
 }
-.menu-toggle div {
-  width: 24px;
-  height: 2px;
-  background: #fff;
+.icon-grid li,
+.social-grid li {
+  flex: 0 0 30%;
+  text-align: center;
+}
+.icon-img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Logo */
-.logo img {
-  height: 40px;
-  object-fit: contain;
-}
+/* Logo & actions inline */
 
-/* Language & View Booklet in top bar */
 .nav-actions {
   display: flex;
   gap: 0.5rem;
 }
-.nav-actions .lang-btn,
-.nav-actions .booklet-btn {
+.lang-btn {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
@@ -124,10 +99,142 @@
   border-radius: 4px;
   cursor: pointer;
 }
+/* app.css */
 
-/* Responsive tweaks */
+/* Navbar styles */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  padding-top: 0.5rem;
+}
+.navbar-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  max-width: 450px;
+  background: #0e0e0e;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+}
+.sidebar.open {
+  width: 300px;
+}
+.sidebar .backdrop {
+  position: sticky;
+  top: 0;
+  height: 6rem;
+  backdrop-filter: blur(10px);
+}
+.sidebar .pattern {
+  position: absolute;
+  top: -15%;
+  left: -50%;
+  width: 800px;
+  height: 800px;
+  opacity: 0.1;
+  background-image: radial-gradient(
+      at 58% 47.4%,
+      rgb(151, 122, 255) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 41% 57%, rgb(151, 122, 255) 0, transparent 50%),
+    radial-gradient(at 43% 46%, rgb(56, 132, 255) 0, transparent 50%),
+    radial-gradient(at 58% 57.7%, rgb(56, 132, 255) 0, transparent 50%);
+}
+.sidebar ul {
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+.sidebar li {
+  margin-bottom: 1rem;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 0;
+}
+.social-list {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  width: 3rem;
+  height: 3rem;
+  z-index: 60;
+}
+.menu-toggle div {
+  width: 1.25rem;
+  height: 2px;
+  background: #fff;
+}
+.logo {
+  justify-self: center;
+}
+.logo img {
+  height: 6.25rem;
+  object-fit: contain;
+}
+.nav-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.nav-actions button,
+.nav-actions a {
+  padding: 0.5rem 1rem;
+  /* background: #444; */
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.nav-actions a,
+.nav-actions .booklet-btn {
+  background: #0069d9;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .navbar-container {
+  .nav-header {
     grid-template-columns: auto auto;
   }
   .nav-actions {

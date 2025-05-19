@@ -1,13 +1,11 @@
 import React from "react";
+import Video from "../assets/Revision_3.mp4";
 import "../App.css";
 export default function Hero() {
   return (
     <section className="hero-section">
       <video className="hero-video" autoPlay loop muted>
-        <source
-          src="https://videos.ctfassets.net/.../Revision_3.mp4"
-          type="video/mp4"
-        />
+        <source src={Video} type="video/mp4" />
       </video>
       <div className="hero-content container">
         <h1>Welcome to Riyadh Season 2024</h1>

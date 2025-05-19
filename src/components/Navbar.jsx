@@ -17,7 +17,6 @@ import iconF from "../assets/nav-images/burger-icons/faceboock-logo.png";
 import iconX from "../assets/nav-images/burger-icons/x-logo.png";
 import iconI from "../assets/nav-images/burger-icons/insta-logo.png";
 
-import "../App.css";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -81,15 +80,14 @@ export default function Navbar() {
 
         {/* Burger toggle */}
         <button
-          className="menu-toggle"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          className={`menu-toggle ${open ? "open" : ""}`}
+          onClick={() => setOpen((o) => !o)}
+          aria-label={open ? "Close menu" : "Open menu"}
         >
           <div />
           <div />
           <div />
         </button>
-
         {/* Logo */}
         <div className="logo">
           <a href="/">
