@@ -11,42 +11,6 @@ body {
   padding: 2rem 1rem;
 }
 
-/* Events styles */
-.events-section h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-.event-card {
-  background: #222;
-  padding: 1rem;
-  border-radius: 4px;
-  text-align: center;
-}
-.event-card img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-/* Zones styles */
-.zones-section h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.zones-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-.zone-card img {
-  width: 100%;
-  border-radius: 4px;
-}
-
 /* Recap styles */
 .recap-section h2 {
   text-align: center;

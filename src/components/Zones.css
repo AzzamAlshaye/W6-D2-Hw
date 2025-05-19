@@ -1,0 +1,114 @@
+.zones-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .zones-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.zones-section {
+  position: relative;
+  padding: 3rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.zones-header h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.zone-item {
+  position: relative;
+  aspect-ratio: 3 / 2.2;
+}
+
+.zone-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s;
+}
+
+.zone-link:hover,
+.zone-link:focus {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.zone-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.zone-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: background 0.2s;
+}
+
+.zone-link:hover .zone-overlay,
+.zone-link:focus .zone-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.zone-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Contain logos without distortion */
+.zone-logo,
+.zone-sponsor-logo {
+  max-width: 45%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Smaller sponsor logos */
+.zone-sponsor-logo {
+  max-width: 25%;
+}
+
+.zone-new {
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #10b981;
+  color: #ffffff;
+  padding: 0 0.5rem;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  z-index: 1;
+}
