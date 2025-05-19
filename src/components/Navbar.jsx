@@ -58,9 +58,7 @@ export default function Navbar() {
                 ))}
               </ul>
             </li>
-            <li className="separator">
-              <hr className="separator-line" />
-            </li>
+
             {/* Social icons row */}
             <li>
               <ul className="social-grid">
@@ -74,6 +72,9 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
+            </li>
+            <li className="separator-bot">
+              <hr className="separator-line" />
             </li>
           </ul>
         </div>

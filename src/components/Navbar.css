@@ -9,40 +9,6 @@
   padding: 0.5rem 1rem;
   z-index: 1000;
 }
-
-/* Toggle */
-/* .menu-toggle {
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
-  z-index: 1001;
-}
-.menu-toggle div {
-  width: 24px;
-  height: 2px;
-  background: #fff;
-} */
-
-/* Sidebar */
-/* .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 0;
-  overflow: hidden;
-  background: #111;
-  transition: width 0.3s ease;
-  z-index: 999;
-}
-.sidebar.open {
-  width: 300px;
-} */
-
 /* Menu list */
 .nav-list {
   list-style: none;
@@ -64,6 +30,7 @@
   font-size: 1rem;
   cursor: pointer;
   border-radius: 4px;
+  margin-top: 2rem;
 }
 
 /* Icons */
@@ -74,10 +41,23 @@
   gap: 0.5rem;
   justify-content: center;
 }
-.icon-grid li,
-.social-grid li {
-  flex: 0 0 30%;
+.icon-grid li {
+  padding-top: 4rem;
+  flex: 1 0 30%;
   text-align: center;
+}
+.social-grid li {
+  padding-top: 35rem;
+  flex: 1 0 30%;
+  text-align: center;
+}
+.separator-bot {
+  padding-top: 30rem;
+  flex: 1 0 30%;
+  text-align: center;
+}
+.icon-cell {
+  height: 2rem;
 }
 .icon-img {
   max-width: 100%;
@@ -245,6 +225,7 @@
   transform: rotate(-45deg) translate(4px, -4px);
 }
 
+/* sidebar styles  */
 .sidebar {
   width: 0;
   transition: width 0.3s ease;
