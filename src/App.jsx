@@ -14,8 +14,8 @@ export default function App() {
       <Hero />
       <Zones />
       <Recap />
-      <Sponsors />
       <About />
+      <Sponsors />
       <Footer />
     </>
   );

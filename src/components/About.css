@@ -1,0 +1,102 @@
+.about-section {
+  padding: 3rem 1rem;
+  background: #000;
+  color: #fff;
+}
+
+.about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 1280px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.about-card {
+  background: #1f1f1f;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.logo-box {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.about-logo {
+  width: 100%;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.text-box {
+  grid-column: span 3;
+}
+
+.spacer {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .spacer {
+    display: block;
+  }
+}
+
+.date-box {
+  grid-column: 1 / span 1;
+  justify-self: start;
+}
+
+.date-content {
+  text-align: center;
+}
+
+.date-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.date-day {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.25rem 0;
+}
+
+.date-month {
+  font-size: 0.875rem;
+}
+
+.video-box {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.about-video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

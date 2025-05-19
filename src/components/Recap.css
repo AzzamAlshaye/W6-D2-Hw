@@ -1,0 +1,87 @@
+.recap-section {
+  position: relative;
+  padding: 3rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden; /* hide overflow so SVG is clipped */
+}
+
+.recap-bg {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  bottom: 0; /* extend to bottom of section */
+  z-index: -10;
+  width: auto;
+  height: 100%;
+  max-width: none;
+}
+
+.recap-container {
+  position: relative;
+}
+
+.recap-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .recap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.recap-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recap-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.recap-title {
+  margin: 1rem 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.recap-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.recap-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.2s;
+  border-radius: 0.25rem;
+}
+
+.recap-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.recap-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+}
+
+.recap-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}

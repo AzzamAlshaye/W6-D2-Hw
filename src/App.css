@@ -11,19 +11,6 @@ body {
   padding: 2rem 1rem;
 }
 
-/* Recap styles */
-.recap-section h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.recap-video {
-  width: 100%;
-  max-width: 800px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 4px;
-}
-
 /* Sponsors styles */
 .sponsors-section h3 {
   text-align: center;
@@ -37,18 +24,6 @@ body {
 }
 .sponsor-logos img {
   max-height: 80px;
-}
-
-/* About styles */
-.about-section h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.about-section p {
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
 }
 
 /* Footer styles */
